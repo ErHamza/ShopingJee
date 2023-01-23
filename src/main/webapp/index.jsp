@@ -3,11 +3,14 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <link href="./style/style.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 
 </h1>
 <br/>
 <h2>Welcome to my app</h2>
+<b>he</b>
 </body>
 </html>
