@@ -11,4 +11,13 @@
         <servlet-name>main</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>signup</servlet-name>
+        <servlet-class>com.marcheli.shoping.Test</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>signup</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -8,9 +8,22 @@
 </head>
 <body>
 
+<? String[] arr ={"hamza", "eeraji"} ?>
+
+<hr>
+
+
+<form action="home">
+
+    <label>name</label>
+    <input type="text" name="name">
+    <button type="submit">Done</button>
+</form>
+
+
 </h1>
 <br/>
-<h2>Welcome to my app</h2>
-<b>he</b>
+
+
 </body>
 </html>

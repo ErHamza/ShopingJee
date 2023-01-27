@@ -1,7 +1,6 @@
 package user;
 
-import com.mysql.cj.xdevapi.Result;
-import dao.DbConnection;
+import com.marcheli.shoping.DbConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
