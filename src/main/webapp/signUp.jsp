@@ -15,37 +15,38 @@
 
 
 
-
-
 </head>
 <body>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form action="#">
+        <form action="signup" method="post">
             <h1>Create Account</h1>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-            </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button>Sign Up</button>
+            <div style="display: flex;column-gap: 4px ">
+                <input type="text" placeholder="First Name" name="name"
+                       style=" margin-left: 0.4em" />
+                <input type="text" placeholder="Seconde Name" name="firstName" />
+
+            </div>
+
+            <input type="email" placeholder="email" name="email" />
+            <input type="text" placeholder="Phone Number" name="phone_number"/>
+            <input type="text" placeholder="adress" name="adress"  />
+            <input type="password" placeholder="Password" name="password"/>
+            <button type="submit">Sign Up</button>
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <form action="#">
+        <form action="signUp" method="post">
             <h1>Sign in</h1>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your account</span>
+<%--            <div class="social-container">--%>
+<%--                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>--%>
+<%--                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>--%>
+<%--                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>--%>
+<%--            </div>--%>
+<%--            <span>or use your account</span>--%>
             <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" name="password" />
             <a href="#">Forgot your password?</a>
             <button>Sign In</button>
         </form>

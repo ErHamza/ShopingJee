@@ -2,11 +2,15 @@ package user;
 
 import com.marcheli.shoping.DbConnection;
 
+import java.security.SecureRandom;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ManagementUser implements InterfaceUser {
+
+    SecureRandom randome = new SecureRandom();
+    byte[] salt = new byte[16];
 
 
     @Override
@@ -44,5 +48,11 @@ public class ManagementUser implements InterfaceUser {
     @Override
     public void modify(Client c) {
 
+    }
+
+    @Override
+    public String password_hash(String s) {
+
+        return null;
     }
 }

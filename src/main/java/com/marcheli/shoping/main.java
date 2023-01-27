@@ -18,8 +18,7 @@ public class main extends HttpServlet {
 //        Client c = manage.signUp(new Client("hamza","1233334","emasssaaaaaa",
 //                "07222737","ks44k","j22d"));
 
-        String name = request.getParameter("name");
-        System.out.println(name);
+
 
         request.getRequestDispatcher("index.jsp").forward(request, response);
 

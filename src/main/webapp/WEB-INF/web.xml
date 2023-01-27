@@ -12,10 +12,16 @@
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
 
+
+
     <servlet>
         <servlet-name>signup</servlet-name>
-        <servlet-class>com.marcheli.shoping.Test</servlet-class>
+        <servlet-class>user.ClientServlet</servlet-class>
     </servlet>
+<!--    <servlet>-->
+<!--        <servlet-name>ClientServlet</servlet-name>-->
+<!--        <servlet-class>user.ClientServlet</servlet-class>-->
+<!--    </servlet>-->
     <servlet-mapping>
         <servlet-name>signup</servlet-name>
         <url-pattern>/signup</url-pattern>

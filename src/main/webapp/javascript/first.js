@@ -10,4 +10,3 @@ signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
 });
 
-alert("imported")
