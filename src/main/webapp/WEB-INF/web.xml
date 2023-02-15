@@ -14,16 +14,33 @@
 
 
 
+
+
     <servlet>
         <servlet-name>signup</servlet-name>
-        <servlet-class>user.ClientServlet</servlet-class>
+        <servlet-class>utilisatuer.ClientServlet</servlet-class>
     </servlet>
 <!--    <servlet>-->
 <!--        <servlet-name>ClientServlet</servlet-name>-->
-<!--        <servlet-class>user.ClientServlet</servlet-class>-->
+<!--        <servlet-class>utilisatuer.ClientServlet</servlet-class>-->
 <!--    </servlet>-->
     <servlet-mapping>
         <servlet-name>signup</servlet-name>
         <url-pattern>/signup</url-pattern>
     </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.authenification.RegistartionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    
+    
+
+
+
 </web-app>

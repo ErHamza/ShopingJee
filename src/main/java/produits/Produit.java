@@ -1,18 +1,30 @@
-package com.marcheli.shoping;
+package produits;
 
 public class Produit {
     private int produit_id;
     private String produit_name;
     private int price;
-    private boolean solde ;
+    private int solde ;
     private String solde_description;
     private String Category;
     private int selled;
     private int quantity;
     private String description;
+    private String image;
 
-    // getters :
+    public void setImage(String image) {
+        this.image = image;
+    }
 
+    public String getImage() {
+        return image;
+    }
+// getters :
+
+
+    public int getSolde() {
+        return solde;
+    }
 
     public int getProduit_id() {
         return produit_id;
@@ -26,9 +38,6 @@ public class Produit {
         return price;
     }
 
-    public boolean isSolde() {
-        return solde;
-    }
 
     public String getSolde_description() {
         return solde_description;
@@ -63,7 +72,7 @@ public class Produit {
         this.price = price;
     }
 
-    public void setSolde(boolean solde) {
+    public void setSolde(int solde) {
         this.solde = solde;
     }
 
@@ -100,5 +109,43 @@ public class Produit {
                 ", quantity=" + quantity +
                 ", description='" + description + '\'' +
                 '}';
+    }
+
+    public Produit(
+                   String produit_name,
+                   int price,
+                   int solde,
+                   String solde_description,
+                   String category,
+                   int selled,
+                   int quantity,
+                   String description,
+                   String image) {
+
+        this.produit_name = produit_name;
+        this.price = price;
+        this.solde = solde;
+        this.solde_description = solde_description;
+        Category = category;
+        this.selled = selled;
+        this.quantity = quantity;
+        this.description = description;
+        this.image = image;
+    }
+
+    public Produit()
+    {}
+
+    public Produit(int produit_id, String produit_name, int price, int solde, String solde_description, String category, int selled, int quantity, String description, String image) {
+        this.produit_id = produit_id;
+        this.produit_name = produit_name;
+        this.price = price;
+        this.solde = solde;
+        this.solde_description = solde_description;
+        Category = category;
+        this.selled = selled;
+        this.quantity = quantity;
+        this.description = description;
+        this.image = image;
     }
 }

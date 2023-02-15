@@ -1,27 +1,27 @@
-package user;
+package utilisatuer;
 
 import com.marcheli.shoping.DbConnection;
 
-import java.security.SecureRandom;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class ManagementUser implements InterfaceUser {
 
-    SecureRandom randome = new SecureRandom();
-    byte[] salt = new byte[16];
+//    SecureRandom randome = new SecureRandom();
+//    byte[] salt = new byte[16];
 
 
     @Override
-    public Client signUp(Client c) {
+    public User signUp(User c) {
         Connection connection = DbConnection.getConnection();
         try{
             PreparedStatement ps = connection.prepareStatement
 
                     ("INSERT INTO client(client_name" +
                             ",email ,phone_number ,password ," +
-                            "adresss ,location) values(?,?,?,?,?,?)");
+                            "adresss ,location, role) values(?,?,?,?,?,?,?)");
 
             ps.setString(1,c.getName());
             ps.setString(2,c.getEmail());
@@ -29,15 +29,11 @@ public class ManagementUser implements InterfaceUser {
             ps.setString(4,c.getPassword());
             ps.setString(5,c.getAdress());
             ps.setString(6,c.getLocation());
+            ps.setString(7,c.getRole());
+
 
             ps.executeUpdate();
             ps.close();
-
-
-
-
-
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -45,14 +41,41 @@ public class ManagementUser implements InterfaceUser {
         return null;
     }
 
-    @Override
-    public void modify(Client c) {
+    public List<User> getAllUsers(){
 
-    }
 
-    @Override
-    public String password_hash(String s) {
+        Connection connection = DbConnection.getConnection();
+        try{
+            PreparedStatement ps = connection.prepareStatement
+
+                    ("select * from client where role <> 'admin'");
+
+
+
+
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
 
         return null;
+
     }
+
+
+
+
+
+
+
+    @Override
+    public void modify(User c) {
+
+    }
+
+
 }

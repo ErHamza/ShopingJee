@@ -12,6 +12,7 @@ public class MainPageClient extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     request.getRequestDispatcher("signed").forward(request, response);
 
+
     }
 
     @Override

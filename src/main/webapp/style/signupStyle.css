@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
+body.signup {
     background: #f6f5f7;
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ button.ghost {
     border-color: #FFFFFF;
 }
 
-form {
+form.login {
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
